@@ -1,0 +1,229 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 25%, #0f1725 50%, #1a0a2e 75%, #0a0e27 100%);
+    background-attachment: fixed;
+    color: #e0e6ff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Fondo animado con efecto tech */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(0, 200, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 120, 0, 0.06) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+main {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Header */
+header.mainmenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    text-align: center;
+    border-bottom: 2px solid rgba(0, 200, 255, 0.3);
+    padding-bottom: 2rem;
+}
+
+header.mainmenu h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0;
+    background: linear-gradient(135deg, #00c8ff 0%, #ff7800 50%, #00c8ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header.mainmenu img {
+    width: 240px;
+    height: 240px;
+    border: 3px solid #00c8ff;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.4), 
+                0 0 40px rgba(255, 120, 0, 0.2);
+    transition: all 0.4s ease;
+}
+
+header.mainmenu img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(0, 200, 255, 0.6),
+                0 0 60px rgba(255, 120, 0, 0.3);
+}
+
+header.mainmenu h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0 0;
+    color: #ffffff;
+}
+
+header.mainmenu h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    color: #00c8ff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header.mainmenu h4 {
+    font-size: 0.85rem;
+    font-weight: 300;
+    margin: 0.5rem 0 0 0;
+    color: #a0a6cc;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Menu */
+menu.mainmenu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+menu.mainmenu a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    background: linear-gradient(135deg, rgba(0, 200, 255, 0.1) 0%, rgba(255, 120, 0, 0.05) 100%);
+    border: 2px solid #00c8ff;
+    border-radius: 12px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    color: #e0e6ff;
+    position: relative;
+    overflow: hidden;
+}
+
+menu.mainmenu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 120, 0, 0.3), transparent);
+    transition: left 0.3s ease;
+    z-index: 0;
+}
+
+menu.mainmenu a span {
+    min-width: 60px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #00c8ff 0%, #0096cc 100%);
+    border-radius: 8px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0a0e27;
+    position: relative;
+    z-index: 2;
+    font-family: 'JetBrains Mono', monospace;
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.5);
+}
+
+menu.mainmenu aside {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+menu.mainmenu aside h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+}
+
+menu.mainmenu aside small {
+    font-size: 0.75rem;
+    color: #a0a6cc;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+menu.mainmenu a:hover {
+    background: linear-gradient(135deg, rgba(0, 200, 255, 0.2) 0%, rgba(255, 120, 0, 0.15) 100%);
+    border-color: #ff7800;
+    transform: translateX(8px);
+    box-shadow: 0 0 25px rgba(0, 200, 255, 0.4),
+                0 0 15px rgba(255, 120, 0, 0.3);
+}
+
+menu.mainmenu a:hover::before {
+    left: 100%;
+}
+
+menu.mainmenu a:hover span {
+    background: linear-gradient(135deg, #ff7800 0%, #ff9900 100%);
+    box-shadow: 0 0 20px rgba(255, 120, 0, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    main {
+        padding: 1.5rem 1rem;
+        max-width: 100%;
+    }
+    
+    header.mainmenu h1 {
+        font-size: 1.8rem;
+    }
+    
+    header.mainmenu img {
+        width: 200px;
+        height: 200px;
+    }
+}

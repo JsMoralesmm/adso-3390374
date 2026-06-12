@@ -4,19 +4,19 @@
 
 ### Centro De Procesos Industriales Y De Construcción
 
-***Regional Caldas***
+**_Regional Caldas_**
 
 ---
 
-| ID | THEME | DESCRIPTION |
-|--- | --- | --- |
-| 01 | Emmet | Workflow - Markup & Styling |
-| 02 | HTML | Structure - Hypertext Markup Languaje | 
-| 03 | CSS | Look & Feel - Cascading style sheet |
-| 04 | JavaScript | Behavior - Programing Languaje |
+| ID  | THEME      | DESCRIPTION                           |
+| --- | ---------- | ------------------------------------- |
+| 01  | Emmet      | Workflow - Markup & Styling           |
+| 02  | HTML       | Structure - Hypertext Markup Languaje |
+| 03  | CSS        | Look & Feel - Cascading style sheet   |
+| 04  | JavaScript | Behavior - Programing Languaje        |
 
-![profile](/src/imgs/img1.jpg)
-***Juan Sebastian Morales M***
+![profile](/src/imgs/asi.jpeg)
+**_Juan Sebastian Morales M_**
 
 [ADSO Files DRIVE](https://tinyurl.com/wnkk334u)
 

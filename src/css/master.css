@@ -42,8 +42,8 @@ body.emmet {
 }
 
 body.html {
-background-color: #EE6429;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23d14c10' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: #EE6429;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23d14c10' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 @keyframes bgMove {
@@ -54,7 +54,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   100% { background-position: center 40%; }
 }
 
-/* button home */
+/* Botón home general (verde) */
 a.btn-home {
   background-color: #4a9604;
   border-radius: 50%;
@@ -76,6 +76,15 @@ a.btn-home:hover {
   opacity: 1;
 }
 
+/* Botón home específico para la página HTML (fondo naranja) */
+body.html .btn-home {
+  background-color: #d35400;   /* naranja oscuro, combina con el tema */
+}
+
+body.html .btn-home:hover {
+  background-color: #e67e22;   /* naranja más claro al pasar el ratón */
+}
+
 main {
   padding: 1rem;
   width: min(100%, 760px);
@@ -90,29 +99,7 @@ main header {
   gap: 1rem;
 }
 
-&.submenu {
-        a:is(:link, :visited) {
-          span {
-            background-color: #ee6429;
-            font-size: 1.5rem;
-            width: 50px;
-            height: 50px;
-          }
-          aside {
-            h4 {
-              font-weight: normal;
-              font-size: 1rem;
-            }
-          }
-        }
-        a:is(:hover) {
-          background-color: #ee6429;
-          span {
-            background-color: #fff9;
-          }
-        }
-      }
-
+/* Estilos base del menú principal */
 main header.mainmenu h1,
 main header.mainmenu h2,
 main header.mainmenu h3,
@@ -179,6 +166,7 @@ main header small {
   color: #d8d8ff;
 }
 
+/* Menú principal (index principal y emmet) */
 menu.mainmenu {
   display: flex;
   justify-content: center;
@@ -242,6 +230,28 @@ menu.mainmenu a:hover span {
   color: #0a0a0a;
 }
 
+/* Menú secundario (submenu) para la sección HTML */
+menu.submenu a:is(:link, :visited) span {
+  background-color: #ee6429;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+}
+
+menu.submenu a:is(:link, :visited) aside h4 {
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+menu.submenu a:is(:hover) {
+  background-color: #ee6429;
+}
+
+menu.submenu a:is(:hover) span {
+  background-color: #fff9;
+}
+
+/* Secciones y contenido */
 section {
   background-color: rgba(8, 13, 30, 0.88);
   border: 1px solid rgba(255, 255, 255, 0.14);

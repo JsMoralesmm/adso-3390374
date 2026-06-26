@@ -331,3 +331,13 @@ xmp {
   overflow-wrap: anywhere;
   overflow-x: auto;
 }
+
+body.html main {
+  width: 100%;
+  max-width: 1200px;
+}
+
+body.html section {
+  padding: 2rem;
+  overflow-x: auto;
+}

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>19-Text</title>
+    <link rel="stylesheet" href="../src/css/master.css" />
+    <style>
+      .pos {
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #222;
+      }
+
+      .tbox {
+        padding: 10px;
+        margin-bottom: 10px;
+        color: black;
+        background-color: #eee;
+      }
+
+      .talign {
+        text-align: justify;
+      }
+
+      .tleft {
+        text-align: left;
+      }
+      .tcenter {
+        text-align: center;
+      }
+      .tright {
+        text-align: right;
+      }
+      .tjustify {
+        text-align: justify;
+      }
+
+      .lh-close {
+        line-height: 1;
+      }
+      .lh-normal {
+        line-height: 1.6;
+      }
+      .lh-wide {
+        line-height: 2.5;
+      }
+
+      .deco-underline {
+        text-decoration: underline;
+      }
+      .deco-overline {
+        text-decoration: overline;
+      }
+      .deco-through {
+        text-decoration: line-through;
+      }
+
+      .tf-upper {
+        text-transform: uppercase;
+      }
+      .tf-lower {
+        text-transform: lowercase;
+      }
+      .tf-cap {
+        text-transform: capitalize;
+      }
+
+      .indent-40 {
+        text-indent: 40px;
+      }
+      .indent-80 {
+        text-indent: 80px;
+      }
+
+      .word-sp {
+        word-spacing: 10px;
+      }
+      .letter-sp {
+        letter-spacing: 4px;
+      }
+    </style>
+  </head>
+  <body class="css">
+    <a href="index.html" class="btn-home">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="#000000"
+        viewBox="0 0 256 256"
+      >
+        <path
+          d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z"
+        ></path>
+      </svg>
+    </a>
+    <main>
+      <header class="mainmenu">
+        <h1>19 - Text</h1>
+        <h3>
+          <li>Align</li>
+          <li>Line Height</li>
+          <li>Decoration</li>
+          <li>Transform</li>
+          <li>Indent</li>
+          <li>Spacing (word / letter)</li>
+        </h3>
+      </header>
+      <section>
+        <h4>1. Text Align:</h4>
+        <div class="pos">
+          <div class="tbox tleft">
+            Align Left: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+          <div class="tbox tcenter">
+            Align Center: Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua.
+          </div>
+          <div class="tbox tright">
+            Align Right: Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua.
+          </div>
+          <div class="tbox tjustify">
+            Align Justify: Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+
+        <h4>2. Line Height:</h4>
+        <div class="pos">
+          <div class="tbox lh-close">
+            Line Height 1: Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua.
+          </div>
+          <div class="tbox lh-normal">
+            Line Height 1.6: Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua.
+          </div>
+          <div class="tbox lh-wide">
+            Line Height 2.5: Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua.
+          </div>
+        </div>
+
+        <h4>3. Text Decoration:</h4>
+        <div class="pos">
+          <div class="tbox deco-underline">
+            Underline: Lorem ipsum dolor sit amet consectetur adipiscing elit.
+          </div>
+          <div class="tbox deco-overline">
+            Overline: Lorem ipsum dolor sit amet consectetur adipiscing elit.
+          </div>
+          <div class="tbox deco-through">
+            Line Through: Lorem ipsum dolor sit amet consectetur adipiscing
+            elit.
+          </div>
+        </div>
+
+        <h4>4. Text Transform:</h4>
+        <div class="pos">
+          <div class="tbox tf-upper">
+            uppercase : Lorem ipsum dolor sit amet consectetur adipiscing elit.
+          </div>
+          <div class="tbox tf-lower">
+            LOWERCASE : Lorem ipsum dolor sit amet consectetur adipiscing elit.
+          </div>
+          <div class="tbox tf-cap">
+            capitalize : Lorem ipsum dolor sit amet consectetur adipiscing elit.
+          </div>
+        </div>
+
+        <h4>5. Text Indent:</h4>
+        <div class="pos">
+          <div class="tbox indent-40">
+            Lorem ipsum dolor sit amet consectetur, adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation.
+          </div>
+          <div class="tbox indent-80">
+            Lorem ipsum dolor sit amet consectetur, adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation.
+          </div>
+        </div>
+
+        <h4>6. Spacing:</h4>
+        <div class="pos">
+          <div class="tbox word-sp">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit.
+          </div>
+          <div class="tbox letter-sp">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit.
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

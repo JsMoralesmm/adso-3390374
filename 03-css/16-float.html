@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>16-Float</title>
+    <link rel="stylesheet" href="../src/css/master.css" />
+    <style>
+      .pos {
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #222;
+      }
+
+      .box {
+        padding: 15px;
+        color: black;
+        line-height: 1.6;
+      }
+
+      .mario {
+        float: left;
+        width: 220px;
+        height: auto;
+        margin: 0 20px 10px 0;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+
+      .mario-right {
+        float: right;
+        width: 220px;
+        height: auto;
+        margin: 0 0 10px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+    </style>
+  </head>
+  <body class="css">
+    <a href="index.html" class="btn-home">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="#000000"
+        viewBox="0 0 256 256"
+      >
+        <path
+          d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z"
+        ></path>
+      </svg>
+    </a>
+    <main>
+      <header class="mainmenu">
+        <h1>16 - Float</h1>
+        <h4>Pushes the element to either the left or right side.</h4>
+      </header>
+      <section>
+        <h4>1. Float Left:</h4>
+        <div class="pos">
+          <img src="imgs/mario.png" alt="Mario" class="mario" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis
+            voluptatibus magni tempora ea nemo consequatur alias mollitia
+            corporis consequuntur cumque harum necessitatibus. Eum totam
+            provident voluptatem autem explicabo nam sapiente. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Unde autem optio eaque nemo
+            commodi ipsum consequatur fugiat atque molestias minima magni
+            obcaecati sequi nobis voluptatum doloremque ipsam recusandae dicta
+            ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+
+        <h4>2. Float Right:</h4>
+        <div class="pos">
+          <img src="imgs/mario.png" alt="Mario" class="mario-right" />
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis
+            quia consequatur maxime excepturi vitae fugiat fuga iusto dolorum
+            autem id quisquam architecto repellat expedita voluptates dicta.
+            Quidem nemo excepturi nostrum. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Cupiditate id error iusto culpa, aut
+            hic neque iure, laborum saepe fugit porro ad iusto. Lorem ipsum
+            dolor sit amet consectetur, adipiscing elit sed do eiusmod tempor
+            incididunt.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

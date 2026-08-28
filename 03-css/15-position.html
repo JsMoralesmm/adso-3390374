@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15-Position</title>
+    <link rel="stylesheet" href="../src/css/master.css" />
+    <style>
+      .pos {
+        position: relative;
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fafafa;
+      }
+
+      .pos--absolute {
+        min-height: 180px;
+      }
+
+      .box {
+        padding: 15px;
+        color: black;
+        line-height: 1.6;
+      }
+
+      .static {
+        position: static;
+        background-color: lightblue;
+      }
+
+      .relative {
+        position: relative;
+        top: 15px;
+        left: 15px;
+        background-color: lightcoral;
+        margin-bottom: 15px;
+      }
+
+      .absolute {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 55%;
+        background-color: lightgreen;
+      }
+
+      .fixed {
+        position: fixed;
+        bottom: 20px;
+        left: 10px;
+        width: 260px;
+        background-color: goldenrod;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+        z-index: 100;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 10px;
+        background-color: mediumpurple;
+      }
+    </style>
+  </head>
+  <body class="css">
+    <a href="index.html" class="btn-home">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="#000000"
+        viewBox="0 0 256 256"
+      >
+        <path
+          d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z"
+        ></path>
+      </svg>
+    </a>
+    <main>
+      <header class="mainmenu">
+        <h1>15 - Position</h1>
+        <h3>
+          <ul>
+            <li>Normal/Static</li>
+            <li>Relative</li>
+            <li>Absolute</li>
+            <li>Fixed</li>
+            <li>Sticky</li>
+          </ul>
+        </h3>
+      </header>
+      <section>
+        <h4>1. Position Static:</h4>
+        <div class="pos">
+          <div class="box static">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
+            reiciendis harum perferendis corporis sint ratione debitis magnam?
+            Quidem facere unde odit expedita beatae quas optio blanditiis cumque
+            nesciunt dolore libero.
+          </div>
+        </div>
+
+        <h4>2. Position Relative:</h4>
+        <div class="pos">
+          <div class="box relative">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor
+            voluptate soluta laboriosam quasi ipsam recusandae minima? Officia
+            sint culpa voluptates at facilis dolorum consequuntur praesentium
+            qui magnam in totam nobis.
+          </div>
+        </div>
+
+        <h4>3. Position Absolute:</h4>
+        <div class="pos pos--absolute">
+          <div class="box absolute">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus nam
+            possimus minima culpa odio doloremque.
+          </div>
+        </div>
+
+        <h4>4. Position Fixed:</h4>
+        <div class="pos"></div>
+
+        <h4>5. Position Sticky:</h4>
+        <div class="pos">
+          <div class="box sticky">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis
+            voluptatibus magni, tempora ea nemo consequatur alias mollitia
+            corporis consequuntur
+          </div>
+          <div class="box static">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis
+            voluptatibus magni, tempora ea nemo consequatur alias mollitia
+            corporis consequuntur, cumque harum necessitatibus. Eum, totam
+            provident! Voluptatem autem explicabo nam sapiente.
+          </div>
+          <div class="box static">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis
+            quia consequatur maxime excepturi vitae. Fugiat fuga iusto dolorum
+            autem id quisquam architecto repellat expedita voluptates dicta.
+            Quidem nemo excepturi nostrum?
+          </div>
+          <div class="box static">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
+            assumenda quis ipsa officia libero velit natus recusandae magnam
+            beatae explicabo eaque perferendis, eveniet cupiditate dolorum at in
+            consequuntur! Dolores, odio!
+          </div>
+          <div class="box static">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
+            quam tempora voluptatem iste ducimus architecto quos voluptates
+            iusto quisquam sed? Illum maiores ipsam beatae, accusantium ipsa
+            laborum officiis aliquam id?
+          </div>
+          <div class="box static">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
+            assumenda quis ipsa officia libero velit natus recusandae magnam
+            beatae explicabo eaque perferendis, eveniet cupiditate dolorum at in
+            consequuntur! Dolores, odio!
+          </div>
+          <div class="box static">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
+            quam tempora voluptatem iste ducimus architecto quos voluptates
+            iusto quisquam sed? Illum maiores ipsam beatae, accusantium ipsa
+            laborum officiis aliquam id?
+          </div>
+          <div class="box static">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
+            assumenda quis ipsa officia libero velit natus recusandae magnam
+            beatae explicabo eaque perferendis, eveniet cupiditate dolorum at in
+            consequuntur! Dolores, odio!
+          </div>
+          <div class="box static">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
+            quam tempora voluptatem iste ducimus architecto quos voluptates
+            iusto quisquam sed? Illum maiores ipsam beatae, accusantium ipsa
+            laborum officiis aliquam id?
+          </div>
+          <div class="box static">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
+            assumenda quis ipsa officia libero velit natus recusandae magnam
+            beatae explicabo eaque perferendis, eveniet cupiditate dolorum at in
+            consequuntur! Dolores, odio!
+          </div>
+          <div class="box static">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
+            quam tempora voluptatem iste ducimus architecto quos voluptates
+            iusto quisquam sed? Illum maiores ipsam beatae, accusantium ipsa
+            laborum officiis aliquam id?
+          </div>
+          <div class="box static">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore
+            assumenda quis ipsa officia libero velit natus recusandae magnam
+            beatae explicabo eaque perferendis, eveniet cupiditate dolorum at in
+            consequuntur! Dolores, odio!
+          </div>
+          <div class="box static">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
+            quam tempora voluptatem iste ducimus architecto quos voluptates
+            iusto quisquam sed? Illum maiores ipsam beatae, accusantium ipsa
+            laborum officiis aliquam id?
+          </div>
+        </div>
+      </section>
+
+      <div class="fixed box">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </div>
+    </main>
+  </body>
+</html>

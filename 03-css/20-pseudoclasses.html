@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20-Pseudoclasses</title>
+    <link rel="stylesheet" href="../src/css/master.css" />
+    <style>
+      .pos {
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #222;
+      }
+
+      .tbox {
+        padding: 10px;
+        margin-bottom: 10px;
+        color: black;
+        background-color: #eee;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 20px;
+        margin-right: 10px;
+        background-color: #eee;
+        color: black;
+        text-decoration: none;
+        border-radius: 6px;
+        border: none;
+        font-size: 15px;
+      }
+
+      .hov:hover {
+        background-color: lightblue;
+        color: black;
+      }
+
+      .act:active {
+        background-color: lightcoral;
+        color: black;
+        transform: scale(0.95);
+      }
+
+      .foc {
+        padding: 10px;
+        font-size: 15px;
+        width: 70%;
+        border: 1px solid #888;
+        border-radius: 4px;
+      }
+
+      .foc:focus {
+        outline: 3px solid lightgreen;
+        background-color: #eaffea;
+      }
+
+      .lv {
+        display: inline-block;
+        padding: 10px 16px;
+        background-color: #eee;
+        border-radius: 6px;
+        margin-right: 10px;
+      }
+
+      .lv:link {
+        color: blue;
+      }
+      .lv:visited {
+        color: purple;
+      }
+
+      div.heart {
+        background-color: transparent;
+        position: relative;
+        margin-block: 2rem;
+        height: 100px;
+        width: 50px;
+        zoom: 2.3;
+      }
+
+      div.heart::before {
+        background-color: orchid;
+        border-radius: 50px 50px 0 0;
+        position: absolute;
+        content: "";
+        height: 80px;
+        width: 50px;
+        transform: rotate(-45deg) translateX(20px);
+        left: 100px;
+        top: 0;
+      }
+
+      div.heart::after {
+        background-color: orchid;
+        border-radius: 50px 50px 0 0;
+        position: absolute;
+        content: "";
+        height: 80px;
+        width: 50px;
+        transform: rotate(45deg) translateX(-20px);
+        left: 150px;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body class="css">
+    <a href="index.html" class="btn-home">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="#000000"
+        viewBox="0 0 256 256"
+      >
+        <path
+          d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z"
+        ></path>
+      </svg>
+    </a>
+    <main>
+      <header class="mainmenu">
+        <h1>20 - Pseudoclasses</h1>
+        <h3>Is used to define a special state of an element</h3>
+      </header>
+      <section>
+        <h4>1. :hover</h4>
+        <div class="pos">
+          <a href="#" class="btn hov">Hover: lorem ipsum dolor</a>
+          <a href="#" class="btn hov">Hover: consectetur adipiscing</a>
+        </div>
+
+        <h4>2. :active</h4>
+        <div class="pos">
+          <a href="#" class="btn act">Active: lorem ipsum dolor</a>
+          <a href="#" class="btn act">Active: consectetur adipiscing</a>
+        </div>
+
+        <h4>3. :focus</h4>
+        <div class="pos">
+          <input type="text" class="foc" value="Focus: lorem ipsum dolor" />
+        </div>
+
+        <h4>4. :link y :visited</h4>
+        <div class="pos">
+          <a href="#" class="lv">Link: lorem ipsum</a>
+          <a href="#" class="lv">Visited: dolor sit amet</a>
+        </div>
+
+        <h4>5. :before Y :after</h4>
+        <div class="heart"></div>
+      </section>
+    </main>
+  </body>
+</html>

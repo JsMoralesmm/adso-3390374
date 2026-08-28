@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>17-Visualization</title>
+    <link rel="stylesheet" href="../src/css/master.css" />
+    <style>
+      .pos {
+        position: relative;
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #222;
+      }
+
+      .box {
+        padding: 15px;
+        color: black;
+        line-height: 1.6;
+      }
+
+      .d-block {
+        display: block;
+        background-color: lightblue;
+      }
+
+      .d-inline {
+        display: inline;
+        background-color: lightcoral;
+        padding: 5px 10px;
+      }
+
+      .d-none {
+        display: none;
+        background-color: gold;
+      }
+
+      .d-flex {
+        display: flex;
+        gap: 10px;
+        background-color: #333;
+        padding: 10px;
+      }
+
+      .d-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        background-color: #333;
+        padding: 10px;
+      }
+
+      .d-flex div,
+      .d-grid div {
+        background-color: lightgreen;
+        padding: 10px;
+      }
+
+      .v-visible {
+        visibility: visible;
+        background-color: lightblue;
+      }
+
+      .v-hidden {
+        visibility: hidden;
+        background-color: lightcoral;
+      }
+
+      .over-box {
+        height: 70px;
+        width: 100%;
+        padding: 10px;
+        color: black;
+      }
+
+      .o-visible {
+        overflow: visible;
+        background-color: black;
+        color: white;
+      }
+
+      .o-hidden {
+        overflow: hidden;
+        background-color: lightcoral;
+        color: white;
+      }
+
+      .o-scroll {
+        overflow: scroll;
+        background-color: gold;
+      }
+
+      .o-auto {
+        overflow: auto;
+        background-color: lightgreen;
+      }
+
+      .z-box1 {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 200px;
+        height: 120px;
+        background-color: lightblue;
+        z-index: 1;
+      }
+
+      .z-box2 {
+        position: absolute;
+        top: 70px;
+        left: 140px;
+        width: 200px;
+        height: 120px;
+        background-color: lightcoral;
+        z-index: 2;
+      }
+
+      .z-box3 {
+        position: absolute;
+        top: 120px;
+        left: 260px;
+        width: 200px;
+        height: 120px;
+        background-color: gold;
+        z-index: 3;
+      }
+    </style>
+  </head>
+  <body class="css">
+    <a href="index.html" class="btn-home">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="#000000"
+        viewBox="0 0 256 256"
+      >
+        <path
+          d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z"
+        ></path>
+      </svg>
+    </a>
+    <main>
+      <header class="mainmenu">
+        <h1>17 - Visualization</h1>
+        <h3>
+          <li>Display: block|inline|none|flex|grid</li>
+          <li>Visibility: visible|hidden</li>
+          <li>Overflow: visible|hidden|scroll|auto</li>
+          <li>Z-Index: 1...n</li>
+        </h3>
+      </header>
+      <section>
+        <h4>1. Display Block:</h4>
+        <div class="pos">
+          <span class="box d-block">
+            Display Block: Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua.
+          </span>
+          <span class="box d-block">
+            Display Block 2: Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </span>
+        </div>
+
+        <h4>2. Display Inline:</h4>
+        <div class="pos">
+          <span class="box d-inline">Uno</span>
+          <span class="box d-inline">Dos</span>
+          <span class="box d-inline">Tres</span>
+          <p>
+            <span class="box d-inline">Inline 1</span>
+            <span class="box d-inline">Inline 2</span>
+            Lorem ipsum dolor sit amet consectetur, adipiscing elit.
+          </p>
+        </div>
+
+        <h4>3. Display None:</h4>
+        <div class="pos">
+          <div class="box d-none">
+            Display None: Lorem ipsum dolor sit amet consectetur adipiscing elit
+            sed do eiusmod tempor incididunt.
+          </div>
+          <div class="box d-block">
+            Visible: Lorem ipsum dolor sit amet consectetur, adipiscing elit. Ut
+            enim ad minim veniam, quis nostrud exercitation.
+          </div>
+        </div>
+
+        <h4>4. Display Flex:</h4>
+        <div class="pos">
+          <div class="d-flex">
+            <div>
+              Flex 1: Lorem ipsum dolor sit amet consectetur adipiscing elit.
+            </div>
+            <div>
+              Flex 2: Ut enim ad minim veniam quis nostrud exercitation.
+            </div>
+            <div>
+              Flex 3: Duis aute irure dolor in reprehenderit in voluptate.
+            </div>
+          </div>
+        </div>
+
+        <h4>5. Display Grid:</h4>
+        <div class="pos">
+          <div class="d-grid">
+            <div>Grid 1</div>
+            <div>Grid 2</div>
+            <div>Grid 3</div>
+            <div>Grid 4</div>
+            <div>Grid 5</div>
+            <div>Grid 6</div>
+          </div>
+        </div>
+
+        <h4>6. Visibility Visible:</h4>
+        <div class="pos">
+          <div class="box v-visible">
+            Visibility Visible: Lorem ipsum dolor sit amet consectetur,
+            adipiscing elit ut enim ad minim veniam.
+          </div>
+        </div>
+
+        <h4>7. Visibility Hidden:</h4>
+        <div class="pos">
+          <div class="box v-visible">
+            Visible: Lorem ipsum dolor sit amet consectetur adipiscing elit.
+          </div>
+          <div class="box v-hidden">
+            Visibility Hidden: Lorem ipsum dolor sit amet consectetur adipiscing
+            elit sed do eiusmod tempor incididunt.
+          </div>
+          <div class="box v-visible">
+            Visible: Lorem ipsum dolor sit amet consectetur, adipiscing elit sed
+            do eiusmod tempor.
+          </div>
+        </div>
+
+        <h4>8. Overflow Visible:</h4>
+        <div class="pos">
+          <div class="over-box o-visible">
+            Overflow Visible: Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Quis voluptatibus magni tempora ea nemo
+            consequatur alias mollitia corporis consequuntur cumque harum
+            necessitatibus. Eum totam provident voluptatem autem explicabo nam
+            sapiente.
+          </div>
+        </div>
+
+        <h4>9. Overflow Hidden:</h4>
+        <div class="pos">
+          <div class="over-box o-hidden">
+            Overflow Hidden: Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Quis voluptatibus magni tempora ea nemo consequatur alias
+            mollitia corporis consequuntur cumque harum necessitatibus. Eum
+            totam provident voluptatem autem explicabo nam sapiente.
+          </div>
+        </div>
+
+        <h4>10. Overflow Scroll:</h4>
+        <div class="pos">
+          <div class="over-box o-scroll">
+            Overflow Scroll: Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Quis voluptatibus magni tempora ea nemo consequatur alias
+            mollitia corporis consequuntur cumque harum necessitatibus. Eum
+            totam provident voluptatem autem explicabo nam sapiente.
+          </div>
+        </div>
+
+        <h4>11. Overflow Auto:</h4>
+        <div class="pos">
+          <div class="over-box o-auto">
+            Overflow Auto: Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Quis voluptatibus magni tempora ea nemo consequatur alias
+            mollitia corporis consequuntur cumque harum necessitatibus. Eum
+            totam provident voluptatem autem explicabo nam sapiente.
+          </div>
+        </div>
+
+        <h4>12. Z-Index:</h4>
+        <div class="pos" style="height: 280px">
+          <div class="z-box1">Z-Index 1: Lorem ipsum dolor sit amet.</div>
+          <div class="z-box2">Z-Index 2: Lorem ipsum dolor sit amet.</div>
+          <div class="z-box3">
+            Z-Index 3: Lorem ipsum dolor sit amet consectetur.
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

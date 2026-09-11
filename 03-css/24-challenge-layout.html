@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>24-Challenge Layout</title>
     <style>
-      body.pagina-principal {
+      body.green-layout-page {
         margin: 0;
         background-color: #17a053;
         font-family: Arial, Helvetica, sans-serif;
       }
 
-      .sprite {
+      .shared-sprite-background {
         background-image: url(imgs/spriteweb.png);
         background-repeat: no-repeat;
       }
@@ -21,7 +21,7 @@
         padding: 3rem 1rem 2rem;
       }
 
-      header .logo-sena {
+      header .main-brand-symbol {
         width: 180px;
         height: 180px;
         background-position: -12px -400px;
@@ -53,7 +53,7 @@
         border-bottom: 4px solid yellow;
       }
 
-      .galeria {
+      .showcase-gallery-area {
         display: flex;
         gap: 1.3rem;
         max-width: 1100px;
@@ -62,7 +62,7 @@
         background-color: #09692e;
       }
 
-      .galeria .tarjeta {
+      .showcase-gallery-area .featured-work-card {
         position: relative;
         flex: 1;
         height: 222px;
@@ -70,14 +70,14 @@
         overflow: hidden;
       }
 
-      .galeria .tarjeta .sprite {
+      .showcase-gallery-area .featured-work-card .shared-sprite-background {
         width: 100%;
         height: 100%;
         background-size: 880px 660px;
         background-position: -516px 0;
       }
 
-      .galeria .tarjeta h3 {
+      .showcase-gallery-area .featured-work-card h3 {
         position: absolute;
         top: 0;
         left: 0;
@@ -89,11 +89,11 @@
         background-color: rgba(255, 255, 255, 0.212);
       }
 
-      .galeria .tarjeta:hover h3 {
+      .showcase-gallery-area .featured-work-card:hover h3 {
         background-color: rgba(219, 219, 219, 0.856);
       }
 
-      .listado {
+      .information-block-list {
         display: flex;
         flex-direction: column;
         gap: 0.6rem;
@@ -103,7 +103,7 @@
         background-color: #09692e;
       }
 
-      .listado .fila {
+      .information-block-list .content-information-row {
         display: flex;
         align-items: center;
         gap: 2rem;
@@ -111,14 +111,14 @@
         background-color: #fff;
       }
 
-      .listado .fila .icono {
+      .information-block-list .content-information-row .left-feature-symbol {
         width: 86px;
         height: 95px;
         flex-shrink: 0;
         background-position: -299px -493px;
       }
 
-      .listado .fila p {
+      .information-block-list .content-information-row p {
         flex: 1;
         margin: 0;
         color: #333;
@@ -126,12 +126,12 @@
         text-align: justify;
       }
 
-      .listado .fila:hover p {
+      .information-block-list .content-information-row:hover p {
         color: #1e7d3c;
         cursor: pointer;
       }
 
-      .listado .fila .lata {
+      .information-block-list .content-information-row .right-can-symbol {
         width: 90px;
         height: 157px;
         flex-shrink: 0;
@@ -146,7 +146,7 @@
         background-color: #fff;
       }
 
-      footer .imagen-final {
+      footer .bottom-brand-illustration {
         width: 335px;
         height: 182px;
         margin: 0 auto 1.5rem;
@@ -173,7 +173,7 @@
       }
     </style>
   </head>
-  <body class="pagina-principal">
+  <body class="green-layout-page">
     <a href="index.html" class="btn-home">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +188,7 @@
       </svg>
     </a>
     <header>
-      <div class="logo-sena sprite"></div>
+      <div class="main-brand-symbol shared-sprite-background"></div>
       <nav>
         <p>Inicio</p>
         <p>Nosotros</p>
@@ -198,76 +198,76 @@
       </nav>
     </header>
 
-    <section class="galeria">
-      <div class="tarjeta">
+    <section class="showcase-gallery-area">
+      <div class="featured-work-card">
         <h3>Sprite 01</h3>
-        <div class="sprite"></div>
+        <div class="shared-sprite-background"></div>
       </div>
-      <div class="tarjeta">
+      <div class="featured-work-card">
         <h3>Sprite 02</h3>
-        <div class="sprite"></div>
+        <div class="shared-sprite-background"></div>
       </div>
-      <div class="tarjeta">
+      <div class="featured-work-card">
         <h3>Sprite 03</h3>
-        <div class="sprite"></div>
+        <div class="shared-sprite-background"></div>
       </div>
     </section>
 
-    <section class="listado">
-      <div class="fila">
-        <div class="icono sprite"></div>
+    <section class="information-block-list">
+      <div class="content-information-row">
+        <div class="left-feature-symbol shared-sprite-background"></div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
           laboriosam cumque sit vero praesentium id tempore, quibusdam
           asperiores eius quaerat expedita repudiandae sequi deleniti labore
           quis animi. Reprehenderit, ut! Sit!
         </p>
-        <div class="lata sprite"></div>
+        <div class="right-can-symbol shared-sprite-background"></div>
       </div>
-      <div class="fila">
-        <div class="icono sprite"></div>
+      <div class="content-information-row">
+        <div class="left-feature-symbol shared-sprite-background"></div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, eum
           earum! Quam, odio? Voluptate qui quam, iusto rerum eaque placeat
           quaerat molestiae veritatis alias dicta facere doloremque quia, quasi
           ipsam?
         </p>
-        <div class="lata sprite"></div>
+        <div class="right-can-symbol shared-sprite-background"></div>
       </div>
-      <div class="fila">
-        <div class="icono sprite"></div>
+      <div class="content-information-row">
+        <div class="left-feature-symbol shared-sprite-background"></div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
           culpa fuga sed velit in dicta. Dolores, ullam debitis illum ipsam
           minus, doloremque obcaecati adipisci, quia sunt maxime sequi? Aut,
           eaque?
         </p>
-        <div class="lata sprite"></div>
+        <div class="right-can-symbol shared-sprite-background"></div>
       </div>
-      <div class="fila">
-        <div class="icono sprite"></div>
+      <div class="content-information-row">
+        <div class="left-feature-symbol shared-sprite-background"></div>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo ducimus
           labore pariatur quos eos dicta excepturi perspiciatis eius incidunt
           debitis architecto id neque eum voluptatum, obcaecati quasi ut.
           Itaque, sunt?
         </p>
-        <div class="lata sprite"></div>
+        <div class="right-can-symbol shared-sprite-background"></div>
       </div>
-      <div class="fila">
-        <div class="icono sprite"></div>
+      <div class="content-information-row">
+        <div class="left-feature-symbol shared-sprite-background"></div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea temporibus
           maxime placeat amet vitae voluptatum commodi pariatur animi, quos
           praesentium consequuntur error labore! Totam voluptatum natus expedita
           vero laborum voluptates?
         </p>
-        <div class="lata sprite"></div>
+        <div class="right-can-symbol shared-sprite-background"></div>
       </div>
     </section>
 
     <footer>
-      <div class="imagen-final sprite"></div>
+      <div class="bottom-brand-illustration shared-sprite-background"></div>
       <nav>
         <p>Inicio</p>
         <p>Nosotros</p>

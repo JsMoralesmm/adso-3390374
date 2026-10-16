@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>32-Clip-Path</title>
+    <link rel="stylesheet" href="../src/css/master.css" />
+  </head>
+  <style>
+    div.clip {
+      background: url(imgs/torreEiffel.jpg) no-repeat;
+      margin: 2rem auto;
+      height: 377px;
+      width: 250px;
+    }
+
+    div.clip1 {
+      clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
+    }
+
+    div.clip1:hover {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    div.clip2 {
+      clip-path: polygon(
+        20% 0%,
+        0% 20%,
+        30% 50%,
+        0% 80%,
+        20% 100%,
+        50% 70%,
+        80% 100%,
+        100% 80%,
+        70% 50%,
+        100% 20%,
+        80% 0%,
+        50% 30%
+      );
+    }
+
+    div.clip2:hover {
+      clip-path: polygon(
+        20% 0%,
+        0% 20%,
+        0 50%,
+        0% 80%,
+        20% 100%,
+        49% 100%,
+        80% 100%,
+        100% 80%,
+        100% 50%,
+        100% 20%,
+        80% 0%,
+        50% 0
+      );
+    }
+  </style>
+  <body class="css">
+    <a href="index.html" class="btn-home">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="#000000"
+        viewBox="0 0 256 256"
+      >
+        <path
+          d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z"
+        ></path>
+      </svg>
+    </a>
+    <main>
+      <header class="mainmenu">
+        <h1>32 - Clip Path</h1>
+        <h3>Property lets you clip an element to a basic shape</h3>
+      </header>
+      <section>
+        <h4>Ejemplo 1:</h4>
+        <div class="clip clip1"></div>
+        <h4>Ejemplo 2:</h4>
+        <div class="clip clip2"></div>
+      </section>
+    </main>
+  </body>
+</html>

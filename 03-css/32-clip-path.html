@@ -7,53 +7,79 @@
     <link rel="stylesheet" href="../src/css/master.css" />
   </head>
   <style>
-    div.clip {
-      background: url(imgs/torreEiffel.jpg) no-repeat;
-      margin: 2rem auto;
-      height: 377px;
-      width: 250px;
-    }
+    section {
+      div.clip {
+        background: url(imgs/pittsburgh.jpg) no-repeat center / cover;
+        border-radius: 14px;
+        corner-shape: squircle;
+        margin: 0 auto;
+        height: 300px;
+        transition: all 0.4s ease-in;
+        width: 300px;
 
-    div.clip1 {
-      clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
-    }
+        &.clip1 {
+          clip-path: polygon(
+            50% 0%,
+            61% 35%,
+            98% 35%,
+            68% 57%,
+            82% 95%,
+            50% 70%,
+            19% 94%,
+            32% 57%,
+            2% 35%,
+            39% 35%
+          );
+          &:hover {
+            clip-path: polygon(
+              50% 0%,
+              100% 0,
+              100% 35%,
+              100% 64%,
+              100% 100%,
+              51% 100%,
+              0 100%,
+              0 75%,
+              0 35%,
+              0 0
+            );
+          }
+        }
 
-    div.clip1:hover {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
+        &.clip2 {
+          clip-path: polygon(
+            0 25%,
+            0 0,
+            35% 0%,
+            65% 0%,
+            100% 0,
+            100% 26%,
+            100% 51%,
+            100% 100%,
+            65% 100%,
+            35% 100%,
+            0 100%,
+            0 50%
+          );
 
-    div.clip2 {
-      clip-path: polygon(
-        20% 0%,
-        0% 20%,
-        30% 50%,
-        0% 80%,
-        20% 100%,
-        50% 70%,
-        80% 100%,
-        100% 80%,
-        70% 50%,
-        100% 20%,
-        80% 0%,
-        50% 30%
-      );
-    }
-
-    div.clip2:hover {
-      clip-path: polygon(
-        20% 0%,
-        0% 20%,
-        0 50%,
-        0% 80%,
-        20% 100%,
-        49% 100%,
-        80% 100%,
-        100% 80%,
-        100% 50%,
-        100% 20%,
-        80% 0%,
-        50% 0
-      );
+          &:hover {
+            clip-path: polygon(
+              10% 25%,
+              35% 25%,
+              35% 0%,
+              65% 0%,
+              65% 25%,
+              90% 25%,
+              90% 50%,
+              65% 50%,
+              65% 100%,
+              35% 100%,
+              35% 50%,
+              10% 50%
+            );
+          }
+        }
+      }
     }
   </style>
   <body class="css">

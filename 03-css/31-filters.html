@@ -7,31 +7,48 @@
     <link rel="stylesheet" href="../src/css/master.css" />
     <style>
       section {
-        img {
-          height: 400px;
+        img.filter {
+          background: linear-gradient(45deg, red 50%, darkblue 50%);
+          border-radius: 14px;
+          outline: 2px solid #fff;
           display: block;
-          margin-inline: auto;
+          corner-shape: squircle;
+          margin: 1rem auto;
+          padding: 0.4rem;
+          transition: all 0.2s ease-in;
           width: 392px;
-        }
 
-        .img:hover {
-          filter: none;
-        }
+          &.filter1 {
+            filter: grayscale(1);
+          }
 
-        .filter1 {
-          filter: blur(2rem);
-        }
+          &.filter2 {
+            filter: blur(15px);
+          }
 
-        .filter2 {
-          filter: grayscale(1);
-        }
+          &.filter3 {
+            filter: sepia(0.83);
+          }
 
-        .filter3 {
-          filter: contrast(50%);
-        }
+          &.filter4 {
+            filter: brightness(0.4);
+          }
 
-        .filter4 {
-          filter: drop-shadow(30px 10px 4px #4444dd);
+          &.filter5 {
+            filter: invert();
+          }
+
+          &.filter6 {
+            filter: drop-shadow(0 0 20px #fff);
+          }
+
+          &.filter7 {
+            filter: hue-rotate(200deg);
+          }
+
+          &:hover {
+            filter: none;
+          }
         }
       }
     </style>
@@ -58,14 +75,20 @@
         </h3>
       </header>
       <section>
-        <h4>Filter Blur:</h4>
-        <img class="img filter1" src="imgs/popeye.png" />
-        <h4>Filter Grayscale</h4>
-        <img class="img filter2" src="imgs/popeye.png" />
-        <h4>Filter Constrast</h4>
-        <img class="img filter3" src="imgs/popeye.png" />
-        <h4>Filter Drop Shadow</h4>
-        <img class="img filter4" src="imgs/popeye.png" />
+        <h4>GrayScale</h4>
+        <img class="filter filter1" src="imgs/popeye.png" alt="popeye" />
+        <h4>Blur</h4>
+        <img class="filter filter2" src="imgs/popeye.png" alt="popeye" />
+        <h4>Sepia</h4>
+        <img class="filter filter3" src="imgs/popeye.png" alt="popeye" />
+        <h4>Brightness</h4>
+        <img class="filter filter4" src="imgs/popeye.png" alt="popeye" />
+        <h4>Invert</h4>
+        <img class="filter filter5" src="imgs/popeye.png" alt="popeye" />
+        <h4>Drop Shadow</h4>
+        <img class="filter filter6" src="imgs/popeye.png" alt="popeye" />
+        <h4>HUE Rotate</h4>
+        <img class="filter filter7" src="imgs/popeye.png" alt="popeye" />
       </section>
     </main>
   </body>

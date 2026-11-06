@@ -9,53 +9,101 @@
       section {
         div.jungle {
           background: url(imgs/jungle.png) no-repeat center / contain;
-          margin: 0 auto;
-          height: 390px;
+          margin: auto;
           position: relative;
+          overflow: hidden;
+          height: 390px;
           width: 320px;
+          img {
+            border-radius: 0;
+            border: none;
+            position: absolute;
+          }
 
           img.logo {
             position: absolute;
             transform: scale(0.5);
             animation: 2.8s animLogo ease-in infinite;
-            top: 10px;
+            top: 20px;
           }
 
           img.dk {
+            width: 140px;
             position: absolute;
             left: 90px;
             top: 140px;
-            width: 140px;
-            animation: 2s animDK ease infinite;
+            animation: 2s animdk ease infinite;
+          }
+
+          div.move {
+            position: absolute;
+            top: 225px;
+            left: 0;
+            animation: 4s animMove ease-out infinite;
+            img.ryno {
+              width: 140px;
+              object-fit: contain;
+              top: 0;
+              animation: 0.2s animRyno linear infinite;
+            }
           }
         }
       }
-
       @keyframes animLogo {
         0%,
         100% {
-          transform: scale(0.5);
+          transform: scale(0.7);
         }
-        50% {
+        to {
           transform: scale(1);
         }
       }
-
-      @keyframes animDK {
+      @keyframes animdk {
         0% {
           transform: translateY(-80px) rotateX(0deg);
         }
-        40% {
+        50% {
           transform: translateY(-80px) rotateX(0deg);
         }
-        50% {
+        55% {
           transform: translateY(-80px) rotateX(180deg);
         }
-        60% {
+        65% {
           transform: translateY(-80px) rotateX(0deg);
         }
         100% {
           transform: translateY(0px) rotateX(0deg);
+        }
+      }
+      @keyframes animRyno {
+        0%,
+        100% {
+          top: 0px;
+        }
+        50% {
+          top: 4px;
+        }
+      }
+      @keyframes animMove {
+        0% {
+          top: 225px;
+          left: 0px;
+          transform: rotateY(0deg);
+        }
+        40% {
+          top: 225px;
+          left: 380px;
+          transform: rotateY(0deg);
+        }
+        50% {
+          top: 225px;
+          left: 380px;
+          transform: rotateY(180deg);
+        }
+        80% {
+          top: 225px;
+          left: 0px;
+          transform: rotateY(180deg);
         }
       }
     </style>

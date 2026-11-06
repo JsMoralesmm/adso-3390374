@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>39-Challenge-Responsive</title>
+    <style>
+      body {
+        background: url(imgs/bg_aventura.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0;
+        height: 100dvh;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+      }
+
+      section {
+        div.tarjeta {
+          border: 3px solid red;
+          height: 300px;
+          width: 300px;
+        }
+
+        &.personaje1 {
+          background: url(imgs/personaje1.png);
+          height: 300px;
+          width: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="imgs/logo_cn.png" alt="Logo Cartoon" />
+
+    <section>
+      <div class="tarjeta personaje1">Finn El Humano</div>
+      <div class="tarjeta personaje2">Jake El Perro</div>
+      <div class="tarjeta personaje3">Dulce Princesa</div>
+      <div class="tarjeta personaje4">Marceline</div>
+    </section>
+  </body>
+</html>

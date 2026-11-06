@@ -3,46 +3,297 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>39-Challenge-Responsive</title>
+    <title>Challenge Responsive</title>
     <style>
       body {
-        background: url(imgs/bg_aventura.png) no-repeat;
-        background-size: cover;
-        background-position: center;
+        background:
+          linear-gradient(rgb(0 0 0 / 18%), rgb(0 0 0 / 18%)),
+          url("imgs/bg_aventura.png") no-repeat center;
         background-attachment: fixed;
+        background-size: cover;
+        color: #fff;
+        font-family: Arial, sans-serif;
         margin: 0;
-        height: 100dvh;
       }
 
-      img {
-        display: block;
+      main {
         margin: 0 auto;
-        width: 300px;
+        width: 1280px;
       }
 
-      section {
-        div.tarjeta {
-          border: 3px solid red;
-          height: 300px;
-          width: 300px;
+      header .logo {
+        background: url("imgs/logo_cn.png") no-repeat center;
+        background-size: contain;
+        height: 280px;
+        margin: 0 auto;
+        width: 400px;
+      }
+
+      .boxes {
+        font-size: 0;
+        margin-top: 40px;
+      }
+
+      .boxes div {
+        background-color: rgb(255 255 255 / 96%);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 18px;
+        box-shadow: 0 12px 24px rgb(0 0 0 / 35%);
+        display: inline-block;
+        height: 280px;
+        margin-right: 28px;
+        position: relative;
+        transition: transform 0.4s ease-in;
+        width: 280px;
+      }
+
+      .boxes div:first-child {
+        margin-left: 28px;
+      }
+
+      .boxes div:last-child {
+        margin-right: 0;
+      }
+
+      .boxes div:nth-child(1) {
+        background-image: url("imgs/personaje1.png");
+      }
+
+      .boxes div:nth-child(2) {
+        background-image: url("imgs/personaje2.png");
+      }
+
+      .boxes div:nth-child(3) {
+        background-image: url("imgs/personaje3.png");
+      }
+
+      .boxes div:nth-child(4) {
+        background-image: url("imgs/personaje4.png");
+      }
+
+      .boxes div:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+
+      .boxes div p {
+        background-color: rgb(0 0 0 / 85%);
+        border-top: 2px solid #fff;
+        border-radius: 0 0 18px 18px;
+        bottom: 0;
+        color: #fff;
+        font-size: 1.4rem;
+        height: 20px;
+        margin: 0;
+        padding: 20px 20px 30px;
+        position: absolute;
+        text-align: center;
+        transition: height 0.4s ease-in;
+        width: 240px;
+      }
+
+      .boxes div:hover p {
+        height: 60px;
+      }
+
+      footer {
+        font-size: 0;
+        margin-top: 40px;
+      }
+
+      footer article {
+        background-color: rgb(0 0 0 / 35%);
+        border-radius: 18px;
+        height: 280px;
+        margin: 50px 28px;
+        position: relative;
+      }
+
+      footer article figure {
+        background-color: rgb(255 255 255 / 92%);
+        border-radius: 18px 0 0 18px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        height: 280px;
+        margin: 0;
+        vertical-align: top;
+        width: 280px;
+      }
+
+      footer article.art1 figure {
+        background-image: url("imgs/personaje1.png");
+      }
+
+      footer article.art2 figure {
+        background-image: url("imgs/personaje3.png");
+      }
+
+      footer article.art3 figure {
+        background-image: url("imgs/personaje2.png");
+      }
+
+      footer article div {
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: 1rem;
+        height: 100%;
+        margin-left: 28px;
+        overflow-y: auto;
+        padding-right: 15px;
+        vertical-align: top;
+        width: 600px;
+      }
+
+      footer article div h2 {
+        border-bottom: 2px solid #fff;
+        color: #fff;
+        font-size: 2rem;
+        margin: 20px 0;
+      }
+
+      footer article div p {
+        color: rgb(255 255 255 / 85%);
+        line-height: 1.4;
+        margin-bottom: 20px;
+        text-align: justify;
+      }
+
+      @media (max-width: 1280px) {
+        main {
+          width: 680px;
         }
 
-        &.personaje1 {
-          background: url(imgs/personaje1.png);
-          height: 300px;
-          width: 300px;
+        .boxes div {
+          margin: 28px;
+        }
+
+        footer article div {
+          width: 280px;
+        }
+
+        footer article div h2 {
+          font-size: 1.4rem;
+        }
+
+        footer article div p {
+          height: 180px;
+        }
+      }
+
+      @media (max-width: 880px) {
+        body {
+          background-position: center;
+        }
+
+        main {
+          width: 380px;
+        }
+
+        header .logo {
+          height: 156px;
+          width: 270px;
+        }
+
+        .boxes div {
+          display: block;
+          height: 340px;
+          margin: 28px auto !important;
+          width: 90%;
+        }
+
+        .boxes div p {
+          box-sizing: border-box;
+          height: 20px;
+          width: 100%;
+        }
+
+        footer article {
+          height: auto;
+          margin: 40px auto;
+          width: 90%;
+        }
+
+        footer article figure {
+          border-radius: 18px 18px 0 0;
+        }
+
+        footer article figure,
+        footer article div {
+          display: block;
+          width: 100%;
+        }
+
+        footer article div {
+          height: auto;
+          margin-left: 0;
+          overflow-y: visible;
+        }
+
+        footer article div h2 {
+          text-indent: 0.8rem;
+        }
+
+        footer article div p {
+          height: auto;
+          padding: 0.8rem;
         }
       }
     </style>
   </head>
   <body>
-    <img src="imgs/logo_cn.png" alt="Logo Cartoon" />
+    <main>
+      <header>
+        <div class="logo"></div>
+      </header>
 
-    <section>
-      <div class="tarjeta personaje1">Finn El Humano</div>
-      <div class="tarjeta personaje2">Jake El Perro</div>
-      <div class="tarjeta personaje3">Dulce Princesa</div>
-      <div class="tarjeta personaje4">Marceline</div>
-    </section>
+      <section class="boxes">
+        <div class="box1"><p>Finn el Humano</p></div>
+        <div class="box2"><p>Jake el Perro</p></div>
+        <div class="box3"><p>Dulce Princesa</p></div>
+        <div class="box4"><p>Marceline</p></div>
+      </section>
+
+      <footer>
+        <article class="art1">
+          <figure></figure>
+          <div class="content">
+            <h2>Finn el Humano</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Finn vive
+              grandes aventuras junto a Jake y siempre intenta proteger a sus
+              amigos.
+            </p>
+          </div>
+        </article>
+
+        <article class="art2">
+          <figure></figure>
+          <div class="content">
+            <h2>Dulce Princesa</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dulce
+              Princesa gobierna el Reino Dulce y participa con sus amigos en
+              numerosas aventuras.
+            </p>
+          </div>
+        </article>
+
+        <article class="art3">
+          <figure></figure>
+          <div class="content">
+            <h2>Jake el Perro</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Jake es
+              el mejor amigo de Finn y puede estirar su cuerpo para ayudar en
+              cualquier situación.
+            </p>
+          </div>
+        </article>
+      </footer>
+    </main>
   </body>
 </html>

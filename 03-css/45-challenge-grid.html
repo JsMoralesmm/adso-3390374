@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>45-Challenge Grid</title>
+    <link rel="stylesheet" href="../src/css/master.css" />
+
+    <style>
+      .galeria {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 80px);
+        grid-template-areas:
+          "finn benson gumball"
+          "finn benson gumball"
+          "darwin benson coraje"
+          "darwin benson coraje" 
+          "mordecai jake craig"
+          "mordecai jake craig";
+        gap: 8px;
+        width: min(90vw, 480px);
+        margin: 0 auto;
+      }
+
+      .personaje {
+        background-color: #1b1b24;
+        background-position: center, center;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 100% 100%, contain;
+        border: 2px solid white;
+        border-radius: 8px;
+      }
+
+      .finn {
+        grid-area: finn;
+        background-image: radial-gradient(
+            circle at 50% 32%,
+            rgba(255, 200, 40, 0.4),
+            rgba(0, 0, 0, 0) 72%
+          ),
+          url("imgs/challenge45/personaje1.png");
+      }
+
+      .jake {
+        grid-area: jake;
+        background-image: radial-gradient(
+            circle at 50% 32%,
+            rgba(120, 220, 90, 0.38),
+            rgba(0, 0, 0, 0) 72%
+          ),
+          url("imgs/challenge45/personaje2.png");
+      }
+
+      .gumball {
+        grid-area: gumball;
+        background-image: radial-gradient(
+            circle at 50% 32%,
+            rgba(60, 200, 235, 0.4),
+            rgba(0, 0, 0, 0) 72%
+          ),
+          url("imgs/challenge45/personaje3.png");
+      }
+
+      .darwin {
+        grid-area: darwin;
+        background-image: radial-gradient(
+            circle at 50% 32%,
+            rgba(255, 150, 60, 0.4),
+            rgba(0, 0, 0, 0) 72%
+          ),
+          url("imgs/challenge45/personaje4.png");
+      }
+
+      .mordecai {
+        grid-area: mordecai;
+        background-image: radial-gradient(
+            circle at 50% 32%,
+            rgba(80, 170, 230, 0.38),
+            rgba(0, 0, 0, 0) 72%
+          ),
+          url("imgs/challenge45/personaje5.png");
+      }
+
+      .benson {
+        grid-area: benson;
+        background-image: radial-gradient(
+            circle at 50% 32%,
+            rgba(230, 120, 90, 0.36),
+            rgba(0, 0, 0, 0) 72%
+          ),
+          url("imgs/challenge45/personaje6.png");
+      }
+
+      .craig {
+        grid-area: craig;
+        background-image: radial-gradient(
+            circle at 50% 32%,
+            rgba(90, 210, 140, 0.36),
+            rgba(0, 0, 0, 0) 72%
+          ),
+          url("imgs/challenge45/personaje7.png");
+      }
+
+      .coraje {
+        grid-area: coraje;
+        background-image: radial-gradient(
+            circle at 50% 32%,
+            rgba(255, 120, 70, 0.4),
+            rgba(0, 0, 0, 0) 72%
+          ),
+          url("imgs/challenge45/personaje8.png");
+      }
+    </style>
+  </head>
+
+  <body class="css">
+    <a href="index.html" class="btn-home">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="#000000"
+        viewBox="0 0 256 256"
+      >
+        <path
+          d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z"
+        ></path>
+      </svg>
+    </a>
+
+    <main>
+      <header class="mainmenu">
+        <h1>45 - Challenge Grid</h1>
+        <h3>Grid Areas: Irregular Gallery</h3>
+      </header>
+
+      <section>
+        <div class="galeria">
+          <div class="personaje finn"></div>
+          <div class="personaje jake"></div>
+          <div class="personaje gumball"></div>
+          <div class="personaje darwin"></div>
+          <div class="personaje mordecai"></div>
+          <div class="personaje benson"></div>
+          <div class="personaje craig"></div>
+          <div class="personaje coraje"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
